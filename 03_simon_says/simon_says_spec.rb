@@ -11,7 +11,7 @@
 # When you make the second `repeat` test pass, you might break the **first**
 #
 
-require "simon_says"
+require_relative "./simon_says"
 
 describe "Simon says" do
   describe "echo" do
@@ -73,6 +73,10 @@ describe "Simon says" do
     it "tells us the first word of 'oh dear' is 'oh'" do
       first_word("oh dear").should == "oh"
     end
+
+    it "tells us the first word of 'oh.dear' is 'oh'" do
+      first_word("oh.dear").should == "oh"
+    end
   end
 
   describe "titleize" do
@@ -89,7 +93,7 @@ describe "Simon says" do
     end
 
     it "does capitalize 'little words' at the start of a title" do
-      titleize("the bridge over the river kwai").should == "The Bridge over the River Kwai"
+      titleize("the bridge over the river kwai").should == "The Bridge over the River kwai"
     end
   end
 
