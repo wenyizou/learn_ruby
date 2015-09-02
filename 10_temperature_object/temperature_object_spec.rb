@@ -17,7 +17,7 @@
 #
 #
 
-require "temperature"
+require_relative "./temperature_object"
 
 describe Temperature do
 
